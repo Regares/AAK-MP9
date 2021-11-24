@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    int sec;
+    printf("Введите целое число секунд с началa суток: ");
+    scanf("%d", &sec);
+    sec = (sec % 60);
+    printf("Прошло %d сек", sec);
+    return 0;
+}
