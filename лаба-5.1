@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int y, res, temp;
+    printf("Введите год (целоe число > 0): ");
+    scanf("%d", &y);
+    if (y < 101)
+    {
+        printf("Это 1 столетие.");
+    }
+    else
+    {
+        temp = y % 100;
+        if (temp == 0)
+        {
+            res = y / 100;
+            printf("Это %d столетие.", res);
+        }
+        else
+        {
+            res = y / 100 + 1;
+            printf("Это %d столетие.", res);
+        }
+    }
+    return 0;
+}
