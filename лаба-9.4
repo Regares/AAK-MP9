@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b , c, res, s;
+    printf("Введите A, B и C: ");
+    scanf("%d%d%d", &a, &b, &c);
+    if ((c > a) || (c > b))
+    {
+        s = a * b;
+        printf("Ни одного, нeзaнятaя площадь: %d кв.ед.", s);
+    }
+    else
+    {
+        s = a * b;
+        a = a / c;
+        b = b / c;
+        res = a * b;
+        s = s - c * c * res;
+        printf("Количество квaдpaтов: %d, незанятая площадь: %d кв.ед.", res, s);
+    }
+    return 0;
+}
